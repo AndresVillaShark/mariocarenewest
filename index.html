@@ -84,9 +84,9 @@
 
       <!-- CTA Button -->
       <div class="hidden md:flex items-center">
-        <a id="phone-cta" href="tel:+18005551234" class="flex items-center gap-2 px-5 py-2 rounded-sm border transition-all border-white text-white hover:bg-white hover:text-brand-blue">
+        <a id="phone-cta" href="tel:+17256059025" class="flex items-center gap-2 px-5 py-2 rounded-sm border transition-all border-white text-white hover:bg-white hover:text-brand-blue">
           <i data-lucide="phone" class="w-4 h-4"></i>
-          <span class="font-bold">1 (800) 555-1234</span>
+          <span class="font-bold">(725) 605-9025</span>
         </a>
       </div>
 
@@ -173,32 +173,34 @@
               <p class="text-gray-500 mt-2 text-base">Speak with a licensed agent today. Find the right plan.</p>
             </div>
 
-            <form class="space-y-5">
+            <form class="space-y-5" action="https://formsubmit.co/mario@mariocare.com" method="POST">
               <div class="grid grid-cols-2 gap-5">
                 <div>
                   <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">First Name</label>
-                  <input type="text" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="John" />
+                  <input type="text" name="first-name" required class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="John" />
                 </div>
                 <div>
                   <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Last Name</label>
-                  <input type="text" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="Doe" />
+                  <input type="text" name="last-name" required class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="Doe" />
                 </div>
               </div>
 
               <div class="grid grid-cols-2 gap-5">
                 <div>
                   <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Phone</label>
-                  <input type="tel" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="(555) 000-0000" />
+                  <input type="tel" name="phone" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="(555) 000-0000" />
                 </div>
                 <div>
                   <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Email</label>
-                  <input type="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="john@example.com" />
+                  <input type="email" name="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="john@example.com" />
                 </div>
               </div>
 
               <div>
                 <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">How can we help?</label>
-                <textarea class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none h-32 resize-none transition-all" placeholder="I am turning 65 soon..."></textarea>
+                <textarea name="message" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none h-32 resize-none transition-all" placeholder="I am turning 65 soon..."></textarea>
+                <input type="hidden" name="_subject" value="New Medicare Inquiry from Website" />
+                <input type="hidden" name="_captcha" value="false" />
               </div>
 
               <button type="submit" class="w-full bg-brand-accent hover:bg-orange-600 text-white text-lg font-bold py-4 rounded-lg shadow-xl transform hover:-translate-y-1 transition-all">
@@ -389,6 +391,61 @@
         </div>
       </div>
     </section>
+    <!-- Map Section -->
+    <section class="py-24 px-6 bg-white" id="locations">
+      <div class="container mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-serif tracking-tight">
+              Visit Our Office
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              Stop by for a free, no-obligation Medicare consultation. We're conveniently located on East Tropicana Avenue.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-blue-100 text-blue-600 shrink-0">
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Address</h4>
+                  <p class="text-gray-600">2250 E Tropicana Ave, Suite #4<br/>Las Vegas, NV</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-orange-100 text-orange-600 shrink-0">
+                  <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Phone</h4>
+                  <p class="text-gray-600">(725) 605-9025</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-green-100 text-green-600 shrink-0">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Email</h4>
+                  <p class="text-gray-600">mario@mariocare.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <iframe
+              src="https://maps.google.com/maps?q=2250+E+Tropicana+Ave+Suite+4,+Las+Vegas,+NV&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -437,15 +494,15 @@
           <ul class="space-y-4 text-gray-400">
             <li class="flex items-start gap-3">
               <i data-lucide="map-pin" class="w-[18px] h-[18px] text-brand-light shrink-0 mt-1"></i>
-              <span>123 Healthcare Blvd, Suite 100<br/>Las Vegas, NV 89101</span>
+              <span>2250 E Tropicana Ave, Suite #4<br/>Las Vegas, NV</span>
             </li>
             <li class="flex items-center gap-3">
               <i data-lucide="phone" class="w-[18px] h-[18px] text-brand-light shrink-0"></i>
-              <span>(800) 555-1234</span>
+              <span>(725) 605-9025</span>
             </li>
             <li class="flex items-center gap-3">
               <i data-lucide="mail" class="w-[18px] h-[18px] text-brand-light shrink-0"></i>
-              <span>help@medicaresimple.com</span>
+              <span>mario@mariocare.com</span>
             </li>
           </ul>
         </div>
