@@ -6,6 +6,8 @@
   <title>Medicare Made Simple</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
@@ -146,7 +148,7 @@
               <span class="text-brand-light">Made Simple</span>
             </h1>
             <p class="text-xl text-gray-300 max-w-lg mb-8 leading-relaxed">
-              We help you understand your choices and compare plans that fit your doctors, prescriptions, and budget. No cost to you.
+              Get personalized Medicare guidance from Mario, a trusted local licensed insurance expert. We make understanding your options easy and stress-free.
             </p>
 
             <div class="flex flex-col gap-4">
@@ -154,17 +156,29 @@
                 <div class="bg-green-500 rounded-full p-1">
                   <i data-lucide="check" class="w-[18px] h-[18px] text-white"></i>
                 </div>
-                <span class="text-gray-100 font-medium text-lg">Local, Licensed Agents</span>
+                <span class="text-gray-100 font-medium text-lg">Locally Licensed Agent</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="bg-green-500 rounded-full p-1">
                   <i data-lucide="check" class="w-[18px] h-[18px] text-white"></i>
                 </div>
-                <span class="text-gray-100 font-medium text-lg">Unbiased Plan Comparisons</span>
+                <span class="text-gray-100 font-medium text-lg">Medicare explained in an understandable manner</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-green-500 rounded-full p-1">
+                  <i data-lucide="check" class="w-[18px] h-[18px] text-white"></i>
+                </div>
+                <span class="text-gray-100 font-medium text-lg">Personalized help for your doctors, prescriptions, and budget</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-green-500 rounded-full p-1">
+                  <i data-lucide="check" class="w-[18px] h-[18px] text-white"></i>
+                </div>
+                <span class="text-gray-100 font-medium text-lg">Helpful resources and consultation for free</span>
               </div>
             </div>
           </div>
-
+          
           <!-- Agent Image -->
           <div class="mt-auto w-[320px] lg:w-[480px] pointer-events-none z-0 hidden lg:block self-start lg:-ml-8 xl:-ml-4">
             <img
@@ -178,52 +192,13 @@
         <!-- Right Side - Form -->
         <div class="lg:col-span-6 flex items-center justify-center lg:justify-end relative h-full pb-10 lg:pb-0 z-20">
 
-          <!-- Form Card -->
-          <div class="w-full max-w-xl bg-white p-8 md:p-10 shadow-2xl rounded-xl border border-gray-100 relative">
-            <div class="text-center mb-8">
-              <h3 class="text-3xl font-serif font-bold text-gray-900">Get a Free Review</h3>
-              <p class="text-gray-500 mt-2 text-base">Speak with a licensed agent today. Find the right plan.</p>
+          <!-- Calendly Embed -->
+          <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl border border-gray-100 overflow-hidden relative">
+            <div class="text-center pt-8 px-8">
+              <h3 class="text-3xl font-serif font-bold text-gray-900">Book a Free Consultation</h3>
+              <p class="text-gray-500 mt-2 text-base">Pick a time that works for you — no obligation.</p>
             </div>
-
-            <form class="space-y-5" action="https://formsubmit.co/mario@mariocare.com" method="POST">
-              <div class="grid grid-cols-2 gap-5">
-                <div>
-                  <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">First Name</label>
-                  <input type="text" name="first-name" required class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="John" />
-                </div>
-                <div>
-                  <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Last Name</label>
-                  <input type="text" name="last-name" required class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="Doe" />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-2 gap-5">
-                <div>
-                  <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Phone</label>
-                  <input type="tel" name="phone" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="(555) 000-0000" />
-                </div>
-                <div>
-                  <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Email</label>
-                  <input type="email" name="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all" placeholder="john@example.com" />
-                </div>
-              </div>
-
-              <div>
-                <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">How can we help?</label>
-                <textarea name="message" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3.5 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none h-32 resize-none transition-all" placeholder="I am turning 65 soon..."></textarea>
-                <input type="hidden" name="_subject" value="New Medicare Inquiry from Website" />
-                <input type="hidden" name="_captcha" value="false" />
-              </div>
-
-              <button type="submit" class="w-full bg-brand-accent hover:bg-orange-600 text-white text-lg font-bold py-4 rounded-lg shadow-xl transform hover:-translate-y-1 transition-all">
-                Get My Free Quote
-              </button>
-
-              <p class="text-[11px] text-gray-400 text-center leading-tight mt-4">
-                By clicking submit, I consent to receive emails, text messages, and phone calls, which may be recorded and/or sent using automated dialing equipment.
-              </p>
-            </form>
-
+            <div class="calendly-inline-widget" data-url="https://calendly.com/mariocare/medicare?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=f97316" style="min-width:320px;height:630px;"></div>
             <!-- Badge -->
             <div class="absolute top-8 right-0 bg-brand-light text-white text-xs font-bold py-1.5 px-4 shadow-md rounded-l-md">
               NO OBLIGATION
