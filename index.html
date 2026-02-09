@@ -305,14 +305,24 @@ I'm committed to building lasting relationships with my clients, providing ongoi
     <section class="bg-[#2a1b3d] py-0 md:py-12 relative">
       <div class="container mx-auto max-w-6xl px-0 md:px-6">
         <div id="video-container" class="relative aspect-video w-full bg-black shadow-2xl overflow-hidden group cursor-pointer">
-          <video
-            id="video-player"
+          <!-- YouTube Thumbnail -->
+          <img
+            id="video-thumbnail"
+            src="https://img.youtube.com/vi/zOq1W9WK8uo/maxresdefault.jpg"
+            alt="Video Thumbnail"
             class="w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1576091160550-2187d80aeff2?auto=format&fit=crop&q=80&w=2070"
-            src="https://videos.pexels.com/video-files/3196344/3196344-hd_1920_1080_25fps.mp4"
-          ></video>
+          />
 
-          <!-- Dark Overlay when paused -->
+          <!-- YouTube iframe (hidden until clicked) -->
+          <iframe
+            id="video-iframe"
+            class="absolute inset-0 w-full h-full hidden"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <!-- Play Overlay -->
           <div id="video-overlay" class="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity group-hover:bg-black/30">
             <div class="w-20 h-20 rounded-full border-2 border-white/50 bg-brand-accent/90 flex items-center justify-center pl-1 shadow-lg transform transition-transform group-hover:scale-110">
               <i data-lucide="play" class="w-8 h-8 text-white fill-white"></i>
@@ -634,27 +644,19 @@ I'm committed to building lasting relationships with my clients, providing ongoi
       });
     });
 
-    // Video player
+    // YouTube video player
     const videoContainer = document.getElementById('video-container');
-    const videoPlayer = document.getElementById('video-player');
+    const videoThumbnail = document.getElementById('video-thumbnail');
+    const videoIframe = document.getElementById('video-iframe');
     const videoOverlay = document.getElementById('video-overlay');
-    let isPlaying = false;
 
     videoContainer.addEventListener('click', () => {
-      if (isPlaying) {
-        videoPlayer.pause();
-        videoOverlay.style.display = 'flex';
-      } else {
-        videoPlayer.play();
+      if (videoIframe.classList.contains('hidden')) {
+        videoIframe.src = 'https://www.youtube.com/embed/zOq1W9WK8uo?autoplay=1&rel=0';
+        videoIframe.classList.remove('hidden');
+        videoThumbnail.classList.add('hidden');
         videoOverlay.style.display = 'none';
       }
-      isPlaying = !isPlaying;
-    });
-
-    // When video ends, show overlay again
-    videoPlayer.addEventListener('ended', () => {
-      isPlaying = false;
-      videoOverlay.style.display = 'flex';
     });
   </script>
 </body>
