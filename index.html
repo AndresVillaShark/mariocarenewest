@@ -318,8 +318,10 @@ I'm committed to building lasting relationships with my clients, providing ongoi
             id="video-iframe"
             class="absolute inset-0 w-full h-full hidden"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            title="Medicare Made Easy - When to Enroll & How to Avoid Penalties"
           ></iframe>
 
           <!-- Play Overlay -->
@@ -652,7 +654,7 @@ I'm committed to building lasting relationships with my clients, providing ongoi
 
     videoContainer.addEventListener('click', () => {
       if (videoIframe.classList.contains('hidden')) {
-        videoIframe.src = 'https://www.youtube.com/embed/zOq1W9WK8uo?autoplay=1&rel=0';
+        videoIframe.src = 'https://www.youtube-nocookie.com/embed/zOq1W9WK8uo?autoplay=1&rel=0&feature=oembed';
         videoIframe.classList.remove('hidden');
         videoThumbnail.classList.add('hidden');
         videoOverlay.style.display = 'none';
